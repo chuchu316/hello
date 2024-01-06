@@ -46,15 +46,16 @@
         }
     </script>
     
-    <button onclick="goToNextPage()">到雅虎</button>
+     <h2>選擇你要訪問的網站</h2>
+
+    <button onclick="goToURL('https://www.google.com')">Google</button>
+    <button onclick="goToURL('https://www.yahoo.com')">Yahoo</button>
+    <button onclick="goToURL('https://www.amazon.com')">Amazon</button>
 
     <script>
-        function goToNextPage() {
-            // 在這裡你可以添加任何在跳轉到下一頁之前的準備操作
-            // 例如，驗證或其他處理
-
-            // 跳轉到下一頁，這裡我們將跳轉到 "page2.html"
-            window.location.href = "https://tw.yahoo.com";
+        function goToURL(url) {
+            // 使用 window.location.href 跳轉到指定的網址
+            window.location.href = url;
         }
     </script>
 
