@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按鈕連結到分頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .page-content {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>請選擇要訪問的分頁</h2>
+
+    <div class="button-container">
+        <button onclick="goToPage('page1.html')">分頁 1</button>
+        <button onclick="goToPage('page2.html')">分頁 2</button>
+        <button onclick="goToPage('page3.html')">分頁 3</button>
+    </div>
+
+    <div class="page-content" id="content">
+        <!-- 分頁內容將顯示在這裡 -->
+    </div>
+
+    <script>
+        function goToPage(page) {
+            // 使用 window.location.href 跳轉到指定的分頁
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
