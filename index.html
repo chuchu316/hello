@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Login</h2>
+    
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <p id="loginResult"></p>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // In a real application, you would send a request to a backend server for authentication.
+            // This is just a simple example.
+            if (username === "user" && password === "pass") {
+                document.getElementById("loginResult").innerText = "Login successful!";
+            } else {
+                document.getElementById("loginResult").innerText = "Login failed. Check username and password.";
+            }
+        }
+    </script>
+
+</body>
+</html>
