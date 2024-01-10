@@ -53,7 +53,7 @@
             // 模擬後端驗證
             if (members.hasOwnProperty(username) && members[username].password === password) {
                 document.getElementById("loginResult").innerText = "登入成功！";
-                window.location.href = 'index.html';  // 登入成功，跳轉到 index.html
+                //window.location.href = 'index.html';  // 登入成功，跳轉到 index.html
             } else {
                 document.getElementById("loginResult").innerText = "登入失敗，請檢查使用者名稱和密碼。";
             }
