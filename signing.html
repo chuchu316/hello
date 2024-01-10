@@ -14,11 +14,12 @@
         <!-- Google Sign-In 按鈕 -->
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-        <form id="registrationForm" style="display: none;">
-            <!-- 這裡添加其他註冊表單字段 -->
-
-            <button type="button" onclick="register()">註冊</button>
-        </form>
+        <!-- 用於顯示用戶信息的區域 -->
+        <div id="userInfo" style="display: none;">
+            <p id="username"></p>
+            <p id="email"></p>
+            <button onclick="logout()">登出</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
