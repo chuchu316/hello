@@ -4,6 +4,9 @@ h1 {
 h2 {
     color:gray;
 }
+#loginForm {
+    color:red;
+}
 *{
   font-family:微軟正黑體;  
 }
