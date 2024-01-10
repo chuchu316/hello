@@ -1,4 +1,9 @@
-
+h1 {
+    color:blue;
+}
+h2 {
+    color:gray;
+}
 *{
   font-family:微軟正黑體;  
 }
