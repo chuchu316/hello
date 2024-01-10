@@ -1,18 +1,23 @@
-// Google 登錄成功後的回調函數
-function onSignIn(googleUser) {
-    const profile = googleUser.getBasicProfile();
-    const email = profile.getEmail();
-
-    // 在這裡可以將 Google 帳號的 email 用作註冊表單的一部分，也可以在後端處理
-    document.getElementById('registrationForm').style.display = 'block';
-}
-
-// 註冊函數，處理其他註冊邏輯
-function register() {
-    // 獲取其他註冊表單字段的數據
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // 在這裡添加與後端通信的邏輯，可以使用Ajax或Fetch API
-    // 例如，使用Fetch API 發送 POST 請求到後端 API
+function show_hide() {
+    var login = document.getElementById("container1");
+    var signup = document.getElementById("container2");
+    var copyright = document.getElementById("copyright");
+  
+    if (login.style.display === "none") {
+        login.style.display = "block";  //lonin出現
+        document.getElementById("username").value="";
+        document.getElementById("password").value="";
+        signup.style.display = "none";  //signup消失
+        copyright.style.margin = "200px 0px 0px 0px";
+    } else {
+        login.style.display = "none";   //login消失
+        signup.style.display = "block"; //signup出現
+        signup.style.visibility="visible";
+        copyright.style.margin = "200px 0px 0px 0px";
+     
+        document.getElementById("fullname").value="";
+        document.getElementById("username2").value="";
+        document.getElementById("password2").value="";
+        document.getElementById("comfirm_password").value="";
+    }
 }
