@@ -22,34 +22,44 @@
 <body>
     <h1>歡迎光臨 安安</h1>
     <img src="cat.gif" alt="cat">
-    <h2>Login</h2>
+    
+    
+   <h2>會員登入</h2>
     
     <form id="loginForm">
-        <label for="username">Username:</label>
+        <label for="username">使用者名稱:</label>
         <input type="text" id="username" name="username" required><br>
 
-        <label for="password">Password:</label>
+        <label for="password">密碼:</label>
         <input type="password" id="password" name="password" required><br>
 
-        <button type="button" onclick="login()">Login</button>
+        <button type="button" onclick="login()">登入</button>
     </form>
 
     <p id="loginResult"></p>
 
     <script>
+        // 模擬會員資訊的字典
+        const members = {
+            "user1": { password: "pass1" },
+            "user2": { password: "pass2" },
+            // 添加更多會員資訊
+        };
+
         function login() {
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // In a real application, you would send a request to a backend server for authentication.
-            // This is just a simple example.
-            if (username === "user" && password === "pass") {
-                document.getElementById("loginResult").innerText = "Login successful!";
+            // 模擬後端驗證
+            if (members.hasOwnProperty(username) && members[username].password === password) {
+                document.getElementById("loginResult").innerText = "登入成功！";
+                window.location.href = 'index.html';  // 登入成功，跳轉到 index.html
             } else {
-                document.getElementById("loginResult").innerText = "Login failed. Check username and password.";
+                document.getElementById("loginResult").innerText = "登入失敗，請檢查使用者名稱和密碼。";
             }
         }
     </script>
+
     
      <h2>選擇你要訪問的網站</h2>
 
