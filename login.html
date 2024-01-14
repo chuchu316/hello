@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入註冊系統</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<button onclick="openModal('loginModal')">登入</button>
+<button onclick="openModal('registerModal')">註冊</button>
+
+<div id="loginModal" class="modal">
+    <span onclick="closeModal('loginModal')" class="close">&times;</span>
+    <h2>會員登入</h2>
+    <form>
+        <label for="loginUsername">帳號：</label>
+        <input type="text" id="loginUsername" required>
+
+        <label for="loginPassword">密碼：</label>
+        <input type="password" id="loginPassword" required>
+
+        <button type="button" onclick="login()">登入</button>
+    </form>
+</div>
+
+<div id="registerModal" class="modal">
+    <span onclick="closeModal('registerModal')" class="close">&times;</span>
+    <h2>會員註冊</h2>
+    <form>
+        <label for="registerUsername">帳號：</label>
+        <input type="text" id="registerUsername" required>
+
+        <label for="registerPassword">密碼：</label>
+        <input type="password" id="registerPassword" required>
+
+        <button type="button" onclick="register()">註冊</button>
+    </form>
+</div>
+
+<script src="modal.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
