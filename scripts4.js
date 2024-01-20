@@ -1,5 +1,5 @@
 // Google Apps Script URL (replace with your own)
-const scriptUrl = "https://script.google.com/macros/s/AKfycbyg0kns0RgcX5dNFzylnKHgHlU_tjZrlkRJfYX2yPU/exec";
+const scriptUrl = "https://script.google.com/macros/s/AKfycbwYnTZQ3ZcrRIf4sW77TWXR-ximfwSWNtmMZA7Aj-1UyLGUaLvLVO0laTMS-5KLSNKQ/exec";
 
 function register() {
   const username = document.getElementById("username").value;
