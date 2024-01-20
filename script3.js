@@ -1,13 +1,13 @@
 const apiEndpoint = 'https://example.com/api';
 
-function openLoginDialog() {
-    const loginDialog = document.getElementById('loginDialog');
-    loginDialog.showModal();
+function openDialog(dialogId) {
+    const dialog = document.getElementById(dialogId);
+    dialog.showModal();
 }
 
-function closeLoginDialog() {
-    const loginDialog = document.getElementById('loginDialog');
-    loginDialog.close();
+function closeDialog(dialogId) {
+    const dialog = document.getElementById(dialogId);
+    dialog.close();
 }
 
 function showNotification(message, isSuccess) {
@@ -37,7 +37,7 @@ function login() {
         console.log(data);
         if (data.success) {
             showNotification('登入成功', true);
-            closeLoginDialog();
+            closeDialog('loginDialog');
             // 可在此處進行登入成功後的其他操作
         } else {
             showNotification('登入失敗，請檢查用戶名和密碼', false);
@@ -46,5 +46,33 @@ function login() {
     .catch(error => {
         console.error('登入失敗：', error);
         showNotification('登入時發生錯誤', false);
+    });
+}
+
+function register() {
+    const newUsername = document.getElementById('newUsername').value;
+    const newPassword = document.getElementById('newPassword').value;
+
+    fetch(`${apiEndpoint}/register`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ newUsername, newPassword }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        if (data.success) {
+            showNotification('註冊成功', true);
+            closeDialog('registerDialog');
+            // 可在此處進行註冊成功後的其他操作
+        } else {
+            showNotification('註冊失敗，請檢查用戶名和密碼', false);
+        }
+    })
+    .catch(error => {
+        console.error('註冊失敗：', error);
+        showNotification('註冊時發生錯誤', false);
     });
 }
