@@ -9,7 +9,8 @@
 <body>
     <div class="container">
         <h1>會員登入註冊</h1>
-        <button onclick="openLoginDialog()">會員登入</button>
+        <button onclick="openDialog('loginDialog')">會員登入</button>
+        <button onclick="openDialog('registerDialog')">會員註冊</button>
 
         <dialog id="loginDialog">
             <form id="loginForm">
@@ -20,22 +21,24 @@
                 <input type="password" id="password" name="password" required>
 
                 <button type="button" onclick="login()">登入</button>
-                <button type="button" onclick="closeLoginDialog()">取消</button>
+                <button type="button" onclick="closeDialog('loginDialog')">取消</button>
+            </form>
+        </dialog>
+
+        <dialog id="registerDialog">
+            <form id="registerForm">
+                <label for="newUsername">新使用者名稱：</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                
+                <label for="newPassword">新密碼：</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+
+                <button type="button" onclick="register()">註冊</button>
+                <button type="button" onclick="closeDialog('registerDialog')">取消</button>
             </form>
         </dialog>
 
         <hr>
-
-        <h1>會員註冊</h1>
-        <form id="registerForm">
-            <label for="newUsername">新使用者名稱：</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-            
-            <label for="newPassword">新密碼：</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-
-            <button type="button" onclick="register()">註冊</button>
-        </form>
     </div>
 
     <script src="script3.js"></script>
