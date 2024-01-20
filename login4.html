@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員註冊登入</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>會員註冊</h2>
+    <form id="registrationForm">
+      <label for="username">使用者名稱:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">密碼:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="button" onclick="register()">註冊</button>
+    </form>
+  </div>
+
+  <div class="container">
+    <h2>會員登入</h2>
+    <form id="loginForm">
+      <label for="loginUsername">使用者名稱:</label>
+      <input type="text" id="loginUsername" name="loginUsername" required>
+
+      <label for="loginPassword">密碼:</label>
+      <input type="password" id="loginPassword" name="loginPassword" required>
+
+      <button type="button" onclick="login()">登入</button>
+    </form>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
